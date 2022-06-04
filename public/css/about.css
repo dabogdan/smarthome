@@ -1,0 +1,31 @@
+/*reset the standard browser css*/
+@import "css-libs/normalize.css";
+/*common css elements*/
+@import "css-modules/main.css";
+/*navigation menu*/
+@import "css-modules/navigation.css";
+/*footer*/
+@import "css-modules/footer.css";
+
+.about-section {
+    padding-top: 10%;
+    height: 100vh;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading span {
+    color: #c85000;
+}
+
+.about-section p {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+.about-section p span {
+    color: #c85000;
+}

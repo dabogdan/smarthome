@@ -1,0 +1,21 @@
+/*reset the standard browser css*/
+@import "css-libs/normalize.css";
+/*common css elements*/
+@import "css-modules/main.css";
+/*navigation menu*/
+@import "css-modules/navigation.css";
+/*footer*/
+@import "css-modules/footer.css";
+/*toggle on/off*/
+@import "css-modules/toggle.css";
+
+.operation-result {
+    padding-top: 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+p {
+    font-size: 2rem;
+}

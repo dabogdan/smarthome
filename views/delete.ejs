@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delete Device Page</title>
+</head>
+<body id="body">
+<!--navigation bar -->
+<nav class="navbar">
+    <!--    container grid-->
+    <div class="navbar__container grid">
+        <!--        logo in the top left corner-->
+        <a href="/"><img src="assets/my_smart_home-logo.png" alt="Logo MySmartHome" class="navbar__logo"></a>
+        <!--        desktop menu -->
+        <div class="menu">
+            <!--            class active added to highlight current page -->
+            <a href="/" class="active">Home</a>
+            <a href="/about">About</a>
+            <a href="/add-device">Add</a>
+            <a href="/status">Status</a>
+            <a href="/control">Control</a>
+            <a href="/delete">Delete</a>
+        </div>
+    </div>
+</nav>
+
+<section class="status__section">
+    <h1 class="status__header">DELETE DEVICE</h1>
+    <form action="./deleted" method="POST" id="delete-form" onsubmit="return confirm('Are you sure you want to delete?')">
+        <label for="">Select your device from the list: <br> <br>
+            <select name="selectedDevice" id="select-device" class="select-device">
+                <% devices.forEach((device) => { %>
+                    <option value="<%= device.name %>">
+                        <%= device.name %>
+                    </option>
+
+                <% }) %>
+            </select>
+        </label>
+        <br><br>
+        <button class="orange-button" id="button-delete">DELETE</button>
+    </form>
+</section>
+
+
+<!--footer-->
+<footer class="lower-footer">
+    <p class="copyright">&copy By <span>Dmytro Bogdan</span>, University of London.</p>
+</footer>
+
+<link rel="stylesheet" href="./css/status.css">
+</body>
+</html>

@@ -1,0 +1,43 @@
+/*reset the standard browser css*/
+@import "css-libs/normalize.css";
+/*common css elements*/
+@import "css-modules/main.css";
+/*navigation menu*/
+@import "css-modules/navigation.css";
+/*footer*/
+@import "css-modules/footer.css";
+
+.status__section {
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.status__header {
+    margin-top: 100px;
+}
+
+.select-device {
+    padding: 0.5rem 0.3rem;
+}
+
+.traits {
+    grid-template-columns: 1fr 1fr;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.traits:nth-child(odd) {
+    margin: auto;
+    line-height: 1.3;
+}
+
+.traits h3 {
+    text-align: left;
+}
+
+.traits p {
+    margin: auto;
+    font-size: 1.3rem;
+}

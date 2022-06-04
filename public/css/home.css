@@ -1,0 +1,75 @@
+/*reset the standard browser css*/
+@import "css-libs/normalize.css";
+/*common css elements*/
+@import "css-modules/main.css";
+/*navigation menu*/
+@import "css-modules/navigation.css";
+/*footer*/
+@import "css-modules/footer.css";
+
+/*background image*/
+.header {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-image: url("../assets/smart-home.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+/*making background-img darker*/
+.header::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background-color: #293240;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: .8;
+}
+
+.header__center {
+    margin: 0 auto;
+}
+
+.header__h1 {
+    color: white;
+    font-size: 4rem;
+    top: 40%;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    animation: h1Move 1.5s ease-in-out;
+    z-index: 2;
+}
+
+.devices-btn {
+    bottom: -45%;
+    display: block;
+    margin: 0 auto;
+    animation: buttonMove 1.5s ease-in-out;
+    z-index: 2;
+}
+
+@keyframes buttonMove {
+    from {bottom: -90%}
+    to {bottom: -45%}
+}
+
+@keyframes h1Move {
+    from {top: -2rem;}
+    to {top: 40%}
+}
+
+.copyright {
+    color: white;
+    position: absolute;
+    bottom: 2rem;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
